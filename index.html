@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -102,36 +103,42 @@
     </section>
 
     <!-- Form di Iscrizione -->
-    <section id="iscrizione" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4 max-w-md">
-            <h2 class="text-3xl font-bold text-center mb-8">Inizia il Tuo Percorso Oggi</h2>
-            <form class="bg-white shadow-lg rounded-lg p-8">
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nome">
-                        Nome
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nome" type="text" required>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="cognome">
-                        Cognome
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cognome" type="text" required>
-                </div>
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-                        Email
-                    </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" required>
-                </div>
-                <div class="flex items-center justify-center">
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg w-full transition duration-300" type="submit">
-                        Iscriviti Ora
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
+    <!-- Form di Iscrizione -->
+<section id="iscrizione" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 max-w-md">
+        <h2 class="text-3xl font-bold text-center mb-8">Inizia il Tuo Percorso Oggi</h2>
+        <form class="bg-white shadow-lg rounded-lg p-8" action="https://app.getresponse.com/add_subscriber.html" method="POST">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="nome">
+                    Nome
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nome" type="text" name="name" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="cognome">
+                    Cognome
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="cognome" type="text" required>
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                    Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" name="email" required>
+            </div>
+
+            <!-- Campo nascosto per il campaign_token -->
+            <input type="hidden" name="campaign_token" value="FBNHH">
+
+            <div class="flex items-center justify-center">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg w-full transition duration-300" type="submit">
+                    Iscriviti Ora
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
